@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2022-04-21 TS függvények</title>
+</head>
+
+<body>
+
+    <script src="fuggvenyek.js"></script>
+    <script src="fuggvenyesFeladatok.js"></script>
+    <script src="osszetettValtozoTipusok"></script>
+    <script>
+        IloveTypescript();
+        NegyzetKeruletTeruletEljaras(7);
+        let generaltSzam = RandomGeneralo100Fuggveny();
+        document.write("<br>A függvénnyel generált szám: " + generaltSzam);
+        let negyzetKerulet = NegyzetKeruletFuggveny(3);
+        document.write("<br>A négyzet kerülete függvény eredménye: " + negyzetKerulet);
+        TeglalapKeruletTerulet(4, 5);
+        let parosEElem = 7;
+        document.write("<br>A párosra vizsgált szám: " + parosEElem + "Eredménye:" + ParosE(parosEElem));
+        document.write("<br>A kigenerált prímszám: " + PrimGenerator(10, 20));
+    </script>
+</body>
+
+</html>
