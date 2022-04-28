@@ -20,3 +20,27 @@ function ParosE(vizsgalandoSzam: number): boolean {
     }
     return false;
 }
+
+//Tuple
+
+function TeglalapKeruletTeruletTupleFuggveny(a: number, b: number): [number, number] {
+    let kerulet: number = 2 * (a + b);
+    let terulet: number = a * b;
+    return [kerulet, terulet];
+}
+
+function UniverzalisTombGenerator(meret: number, alsoHatar: number, felsoHatar: number): Array<number> {
+    let generaltTomb: Array<number> = [];
+    for (let i = 0; i < meret; i++) {
+        generaltTomb.push(Math.round(Math.random() * (felsoHatar - alsoHatar)) + alsoHatar);
+    }
+    return generaltTomb;
+}
+
+function OsszegzesTetele(vizsgaltTomb: Array<number>): number {
+    let osszeg: number = 0;
+    for (let i = 0; i < vizsgaltTomb.length; i++) {
+        osszeg += vizsgaltTomb[i];
+    }
+    return osszeg;
+}

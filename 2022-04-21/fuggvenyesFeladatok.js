@@ -18,3 +18,23 @@ function ParosE(vizsgalandoSzam) {
     }
     return false;
 }
+//Tuple
+function TeglalapKeruletTeruletTupleFuggveny(a, b) {
+    var kerulet = 2 * (a + b);
+    var terulet = a * b;
+    return [kerulet, terulet];
+}
+function UniverzalisTombGenerator(meret, alsoHatar, felsoHatar) {
+    var generaltTomb = [];
+    for (var i = 0; i < meret; i++) {
+        generaltTomb.push(Math.round(Math.random() * (felsoHatar - alsoHatar)) + alsoHatar);
+    }
+    return generaltTomb;
+}
+function OsszegzesTetele(vizsgaltTomb) {
+    var osszeg = 0;
+    for (var i = 0; i < vizsgaltTomb.length; i++) {
+        osszeg += vizsgaltTomb[i];
+    }
+    return osszeg;
+}
