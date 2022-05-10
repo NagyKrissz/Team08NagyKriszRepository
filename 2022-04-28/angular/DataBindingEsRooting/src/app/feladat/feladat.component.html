@@ -1,0 +1,19 @@
+<img src={{kepHelye}} alt={{kepCime}} title={{kepCime}} width={{kepMeret}}>
+<img [src]="kepHelye" [alt]="kepCime" [title]="kepCime" [width]="kepMeret">
+
+<button type="button" class="btn btn-primary m-2" (click)="KepCsere()">Kép lecserélése</button>
+
+
+<h3>Téglalap kerülete területe</h3>
+<div class="form-group">
+  <label for="aOldal">A oldal értéke:</label>
+  <input type="number" [(ngModel)]="aOldal" id="aOldal" class="form-control" value="1" min="1" max="100">
+</div>
+<div class="form-group">
+  <label for="bOldal">B oldal értéke:</label>
+  <input type="number" [(ngModel)]="bOldal" id="bOldal" class="form-control" value="1" min="1" max="100">
+</div>
+<p>A téglalap a oldalának mérete: {{aOldal}} cm</p>
+<p>A téglalap b oldalának mérete: {{bOldal}} cm</p>
+<p>A téglalap kerülete: {{2*(aOldal+bOldal)}} cm</p>
+<p>A téglalap területe: {{aOldal*bOldal}} cm<sup>2</sup></p>

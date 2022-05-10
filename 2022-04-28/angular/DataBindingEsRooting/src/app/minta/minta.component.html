@@ -1,0 +1,40 @@
+<h1>Data Binding minta aloldal</h1>
+<h2>Interpolation(Egyszerű Érték átadás)</h2>
+<!--{{vlaue}} vagy más néven magyarul {{érték}}-->
+<p>Az oldalt készítette: {{keszito}}</p>
+<a href={{utvonal}}>Angular honlap</a>
+
+<h2>Property Binding(Tulajdonság megadása)</h2>
+<!--[property]="value" vagy magyarul [tulajdonság]="érték"-->
+<a [href]="utvonal">Angular honlap</a>
+
+<h2>Event Binding(Eseményhez kötés)</h2>
+<div>
+  <button class="btn btn-primary m-2" (click)="uzenet()">Event Handler-Üzenet</button>
+  <button class="btn btn-success m-2" (click)="modosito()">Event Handler-Módosító</button>
+</div>
+
+<h2>Kétirányú Data Binding</h2>
+
+<h3>Négyzet kerület terület</h3>
+<div class="form-group">
+  <label for oldalA>Az oldal mérete:</label>
+  <input type="number" [(ngModel)]="aOldal" id="oldalA" class="form-control">
+</div>
+<p>A négyzet a oldalának mérete: {{aOldal}} cm</p>
+<p>A négyzet kerülete: {{4*aOldal}} cm</p>
+<p>A négyzet területe: {{aOldal*aOldal}} cm<sup>2</sup></p>
+
+<p>Tömbünk legelső eleme: {{bevasarloLista[0]}}</p>
+
+<ul>
+  <li *ngFor="let gyumolcs of bevasarloLista">
+    {{gyumolcs}}
+  </li>
+</ul>
+
+<ul>
+  <li *ngFor="let dolgozo of interfaceTomb">
+    {{dolgozo.nev}} ( {{dolgozo.fizetes}}Ft )
+  </li>
+</ul>
